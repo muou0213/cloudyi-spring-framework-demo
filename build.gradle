@@ -1,0 +1,27 @@
+group 'com.ncepu.cloudyi'
+version '1.0-SNAPSHOT'
+
+subprojects {
+    group 'com.ncepu.cloudyi'
+    version '1.0-SNAPSHOT'
+
+    apply plugin: 'java'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    repositories {
+        maven {
+            name = 'aliyun'
+            url = 'http://maven.aliyun.com/nexus/content/groups/public/'
+        }
+        mavenCentral()
+    }
+
+    dependencies {
+        // https://mvnrepository.com/artifact/org.springframework/spring-context
+        compile group: 'org.springframework', name: 'spring-context', version: '5.2.6.RELEASE'
+
+        testCompile group: 'junit', name: 'junit', version: '4.12'
+    }
+}
