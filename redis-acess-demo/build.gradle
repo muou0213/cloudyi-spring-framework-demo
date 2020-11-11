@@ -1,0 +1,12 @@
+dependencies {
+    compile 'redis.clients:jedis'
+    compile 'org.springframework.data:spring-data-redis'
+// https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-core'
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind'
+
+    compile project(':common')
+
+    testCompile group: 'junit', name: 'junit'
+}

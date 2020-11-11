@@ -1,0 +1,12 @@
+dependencies {
+    // https://mvnrepository.com/artifact/org.springframework/spring-jdbc
+    compile group: 'org.springframework', name: 'spring-jdbc'
+
+    implementation group: 'mysql', name: 'mysql-connector-java'
+    // https://mvnrepository.com/artifact/cglib/cglib
+//    implementation group: 'cglib', name: 'cglib', version: '3.3.0'
+
+    compile project(':common')
+
+    testCompile group: 'junit', name: 'junit'
+}

@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+
+repositories {
+    maven {
+        name = 'aliyun'
+        url = 'http://maven.aliyun.com/nexus/content/groups/public/'
+    }
+    mavenCentral()
+}
+
+dependencies {
+
+    compile 'org.springframework.boot:spring-boot-starter-security'
+    compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5:3.0.4.RELEASE'
+
+    testCompile group: 'junit', name: 'junit'
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ncepu.cloudyispringframework.transactiondemo.mapper.UserMapper">
+    <select id="selectAllUser" resultType="com.ncepu.cloudyispringframworkdemo.common.entity.User">
+        select userName, accountName, description from `user`;
+    </select>
+
+    <insert id="insertUser">
+        insert into `user` (userName, accountName, description) value (#{username}, #{accountName}, #{description})
+    </insert>
+
+    <select id="selectAllUserByOrder" resultType="com.ncepu.cloudyispringframworkdemo.common.entity.User">
+        select userName, accountName, description from `user` order by ${accountName};
+    </select>
+
+    <select id="selectByAccountName" resultType="com.ncepu.cloudyispringframworkdemo.common.entity.User">
+        select userName, accountName, description from `user` where 1=1
+        <if test="accountName != null">
+            and accountName = #{accountName}
+        </if>
+       <!-- <if test="userName != null">
+            and userName = #{userName}
+        </if>-->
+    </select>
+</mapper>

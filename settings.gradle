@@ -1,4 +1,10 @@
 rootProject.name = 'cloudyispringframeworkdemo'
-include 'jdbcdemo'
-include 'aopdemo'
+include 'jdbc-demo'
+include 'aop-demo'
+include 'ioc-demo'
+include 'spring-security-demo'
+include 'transaction-demo'
+include 'common'
+include 'redis-acess-demo'
+include 'session-demo'
 

@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'com.ncepu.cloudyi'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    //datasource
+    implementation group: 'org.apache.commons', name: 'commons-dbcp2'
+    implementation group: 'mysql', name: 'mysql-connector-java'
+    // https://mvnrepository.com/artifact/org.mybatis/mybatis
+    implementation group: 'org.mybatis', name: 'mybatis'
+    // https://mvnrepository.com/artifact/org.mybatis/mybatis-spring
+    implementation group: 'org.mybatis', name: 'mybatis-spring'
+    implementation group: 'org.springframework', name: 'spring-jdbc'
+
+
+    implementation project(':common')
+
+
+    testCompile group: 'junit', name: 'junit'
+}
