@@ -7,4 +7,5 @@ include 'transaction-demo'
 include 'common'
 include 'redis-acess-demo'
 include 'session-demo'
+include 'spring-dubbo-consumer'
 
