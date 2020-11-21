@@ -3,7 +3,6 @@ package com.ncepu.cloudyispringframework.transactiondemo.mapper;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
 
 import com.ncepu.cloudyispringframworkdemo.common.entity.User;
 
@@ -14,6 +13,4 @@ public interface UserMapper {
     User selectByAccountName(String accountName);
 
     void insertUser(User user);
-
-
 }
